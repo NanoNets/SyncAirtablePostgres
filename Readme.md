@@ -11,6 +11,7 @@ Docker Compose
 ## Installation
 
 ### Docker
+On a command line run
 ```
 curl -fsSL https://test.docker.com -o test-docker.sh
 
@@ -18,7 +19,7 @@ sh test-docker.sh
 ```
 
 ### Docker Compose
-
+On a command line run
 ```
 sudo wget --output-document=/usr/local/bin/docker-compose "https://github.com/docker/compose/releases/download/$(wget --quiet --output-document=- https://api.github.com/repos/docker/compose/releases/latest | grep --perl-regexp --only-matching '"tag_name": "\K.*?(?=")')/run.sh"
 
@@ -29,10 +30,18 @@ sudo wget --output-document=/etc/bash_completion.d/docker-compose "https://raw.g
 
 ## Usage
 
+### 0. Clone the Repostiory
+
+Run the following on your command line
+```
+git clone https://github.com/sjain07/SyncAirtablePostgres.git
+cd SyncAirtablePostgres
+```
+
 ### 1.  Edit db-params.json
 Add your database connection parameters
 
-### 2. Add the list of tables you want to sync to airtable.json
+### 2. Add the list of tables you want to sync and your api key to airtable.json
 
 You have to add the `BaseId` and `Table Name`
 
@@ -48,10 +57,14 @@ https://airtable.com/appnUr44xd9unezyt/api/docs#curl/introduction
 
 #### c. add to airtable.json
 ```
-{
+"bases": {
     "appnUr44xd9unezyt" : ["Epics"]
 }
 ```
+
+#### d. add your Airtable API Key to airtable.json
+
+https://support.airtable.com/hc/en-us/articles/219046777-How-do-I-get-my-API-key-
 
 
 ### 3. Run with Docker Compose
