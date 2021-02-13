@@ -1,0 +1,1 @@
+*/5 * * * *  cd /home/sync/ && /usr/bin/python3 /home/sync/sync.py >> /var/log/cron.log 2>&1

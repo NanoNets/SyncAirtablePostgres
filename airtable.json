@@ -1,0 +1,7 @@
+{
+    "bases":{
+        "BaseId1" : ["TableName1","TableName2"],
+        "BaseId2" : ["TableName3","TableName4"]
+    },
+    "airtable_key":"keyg8q2j6kNYt7mT"
+}
